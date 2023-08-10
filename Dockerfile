@@ -58,6 +58,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
             sqlsrv \
             pdo_sqlsrv
 
+## Configure PHP Memory
+
+RUN mkdir -p /usr/local/etc/php/conf.d/ \
+    && echo 'memory_limit = 1024M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+
 # Composer
 RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/master/web/download/1.9.3/composer.phar && mv composer.phar /usr/bin/composer && chmod +x /usr/bin/composer
 
