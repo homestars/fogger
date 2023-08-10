@@ -19,9 +19,19 @@ parameters:
 
 doctrine:
     dbal:
+        types:
+            geometry:   CrEOF\Spatial\DBAL\Types\GeometryType
+            point:      CrEOF\Spatial\DBAL\Types\Geometry\PointType
+            polygon:    CrEOF\Spatial\DBAL\Types\Geometry\PolygonType
+            linestring: CrEOF\Spatial\DBAL\Types\Geometry\LineStringType
+            enum:       Doctrine\DBAL\Types\StringType
         default_connection: source
         connections:
             source:
+                server_version: '5.7'
+                schema_filter: ~^(?!(sfdc_all_accounts|tmp_analytics_a|tmp_analytics_b|tmp_analytics_c|tmp_analytics_d|tmp_analytics_e|tmp_analytics_g|tmp_analytics_h|tmp_analytics_i|tmp_analytics_j|tmp_analytics_k|tmp_analytics_l|tmp_analytics_m|tmp_analytics_n|tmp_analytics_o|tmp_analytics_p|tmp_analytics_q|tmp_analytics_r|tmp_analytics_s|tmp_analytics_t|tmp_analytics_u|tmp_analytics_v|tmp_analytics_w|tmp_analytics_x|tmp_analytics_y|tmp_analytics_z))~
+                mapping_types:
+                    enum: string
                 url: '%env(resolve:SOURCE_DATABASE_URL)%'
                 options:
                     !php/const PDO::MYSQL_ATTR_USE_BUFFERED_QUERY: 0
@@ -29,6 +39,9 @@ doctrine:
                     collate: '%env(resolve:COLLATE)%'
                     !php/const PDO::MYSQL_ATTR_INIT_COMMAND: '%env(resolve:MYSQL_ATTR_INIT_COMMAND)%'
             target:
+                server_version: '5.7'
+                mapping_types:
+                    enum: string
                 options:
                     !php/const PDO::MYSQL_ATTR_LOCAL_INFILE: 1
                     charset: '%env(resolve:CHARSET)%'
