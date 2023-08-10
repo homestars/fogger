@@ -23,7 +23,8 @@
         "symfony/property-access": "4.2.*",
         "symfony/property-info": "4.2.*",
         "symfony/serializer": "4.2.*",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "creof/doctrine2-spatial": "*"
     },
     "require-dev": {
         "behat/symfony2-extension": "^2.1",

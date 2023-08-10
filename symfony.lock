@@ -20,6 +20,18 @@
     "container-interop/container-interop": {
         "version": "1.2.0"
     },
+    "creof/doctrine2-spatial": {
+        "version": "1.2.0"
+    },
+    "creof/geo-parser": {
+        "version": "2.2.1"
+    },
+    "creof/wkb-parser": {
+        "version": "v2.4"
+    },
+    "creof/wkt-parser": {
+        "version": "2.2.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
