@@ -1,0 +1,33 @@
+tables:
+    companies:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+        subsetStrategy: value
+        subsetOptions:
+          column: id
+          values:
+            - 2009170
+            - 2009171
+            - 2009172
+    absences:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            starts_at: { maskStrategy: none, options: {  } }
+            ends_at: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: companies
+          child_table_column_name: company_id
+    locations:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            country_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: where_sql
+        subsetOptions:
+          sql: "country_id is null OR country_id IN (SELECT id FROM countries WHERE `iso` = 'CA')"
+excludes: {  }
