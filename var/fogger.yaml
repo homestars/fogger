@@ -1,0 +1,2001 @@
+company_ids: &company_ids
+  - 318259
+  - 203900
+  - 199488
+  - 206839
+  - 210478
+  - 192821
+  - 196674
+  - 2654866
+  - 2564133
+  - 196226
+  - 2773030
+  - 217381
+  - 2777315
+  - 204308
+  - 2786236
+  - 2776037
+  - 2779876
+  - 204347
+  - 2780350
+  - 2703616
+  - 2689851
+  - 2783550
+  - 2773989
+  - 2778163
+  - 202269
+  - 202095
+  - 222218
+  - 2847093
+  - 192775
+  - 2804867
+  - 2593758
+  - 223430
+  - 2728594
+  - 194358
+  - 2773108
+  - 2784742
+  - 2798007
+  - 218473
+  - 2780137
+  - 2774423
+  - 2701780
+  - 2775055
+  - 2621803
+  - 2566233
+  - 217845
+  - 204027
+  - 2783062
+  - 2775182
+  - 2798983
+  - 2855822
+subset: &subset
+  subsetStrategy: value
+  subsetOptions:
+    column: company_id
+    values: *company_ids
+tables:
+    absences:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            starts_at: { maskStrategy: none, options: {  } }
+            ends_at: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    answers:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            question_id: { maskStrategy: none, options: {  } }
+            owner_id: { maskStrategy: none, options: {  } }
+            owner_type: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            answer: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    api_keys:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            secret: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            owner: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            phone_number: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    ar_internal_metadata:
+        columns:
+            key: { maskStrategy: none, options: {  } }
+            value: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    auto_cil_rules:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            begin_at: { maskStrategy: none, options: {  } }
+            end_at: { maskStrategy: none, options: {  } }
+            star_rating: { maskStrategy: none, options: {  } }
+            frequency: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            notes: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    badges:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            badgeable_id: { maskStrategy: none, options: {  } }
+            badgeable_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    best_of_awards:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            greater_area_id: { maskStrategy: none, options: {  } }
+            year: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            radius: { maskStrategy: none, options: {  } }
+            read_only: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    best_ofs:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            best_of_award_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            award_type: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    business_profiles:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            company_name: { maskStrategy: none, options: {  } }
+            principal_owner: { maskStrategy: none, options: {  } }
+            principal_owner_first_name: { maskStrategy: none, options: {  } }
+            principal_owner_last_name: { maskStrategy: none, options: {  } }
+            trade_certificates: { maskStrategy: none, options: {  } }
+            gst_hst: { maskStrategy: none, options: {  } }
+            province_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            contact_email: { maskStrategy: none, options: {  } }
+            principal_owner_email: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    categories:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            synonyms: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+            companies_count: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            ca_category_id: { maskStrategy: none, options: {  } }
+            parent_category_id: { maskStrategy: none, options: {  } }
+            singular_noun: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            calculated_review_rate_ratio: { maskStrategy: none, options: {  } }
+            scaled_review_rate_ratio: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            category_uuid: { maskStrategy: none, options: {  } }
+    categories_keywords:
+        columns:
+            category_id: { maskStrategy: none, options: {  } }
+            keyword_id: { maskStrategy: none, options: {  } }
+    category_tags:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            category_taggable_id: { maskStrategy: none, options: {  } }
+            category_taggable_type: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    category_tasks:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            product_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+    cil_reasons:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            zendesk_macro_title: { maskStrategy: none, options: {  } }
+            zendesk_macro_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    cities:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            launched: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            priority: { maskStrategy: none, options: {  } }
+            mature: { maskStrategy: none, options: {  } }
+            company_count_cache: { maskStrategy: none, options: {  } }
+            has_blog: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            district_uuid: { maskStrategy: none, options: {  } }
+            market_area_name: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    city_categories:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            popularity_cache: { maskStrategy: none, options: {  } }
+            company_count_cache: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    companies:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            auto_reply_template_id: { maskStrategy: none, options: {  } }
+            profile: { maskStrategy: none, options: {  } }
+            url: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            created_by: { maskStrategy: none, options: {  } }
+            updated_by: { maskStrategy: none, options: {  } }
+            sic_code: { maskStrategy: none, options: {  } }
+            ca_company_id: { maskStrategy: none, options: {  } }
+            listing: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            acxiom_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            referring_user_id: { maskStrategy: none, options: {  } }
+            hours_of_operation: { maskStrategy: none, options: {  } }
+            service_area: { maskStrategy: none, options: {  } }
+            products: { maskStrategy: none, options: {  } }
+            services: { maskStrategy: none, options: {  } }
+            brands: { maskStrategy: none, options: {  } }
+            styles: { maskStrategy: none, options: {  } }
+            specialities: { maskStrategy: none, options: {  } }
+            year_established: { maskStrategy: none, options: {  } }
+            number_of_employees: { maskStrategy: none, options: {  } }
+            payment_method: { maskStrategy: none, options: {  } }
+            price_range: { maskStrategy: none, options: {  } }
+            guarantee: { maskStrategy: none, options: {  } }
+            return_policy: { maskStrategy: none, options: {  } }
+            where_to_buy: { maskStrategy: none, options: {  } }
+            diplomas: { maskStrategy: none, options: {  } }
+            licenses: { maskStrategy: none, options: {  } }
+            memberships: { maskStrategy: none, options: {  } }
+            liability_insurance: { maskStrategy: none, options: {  } }
+            bonded: { maskStrategy: none, options: {  } }
+            workers_compensation: { maskStrategy: none, options: {  } }
+            project_rate: { maskStrategy: none, options: {  } }
+            project_minimum: { maskStrategy: none, options: {  } }
+            written_contract: { maskStrategy: none, options: {  } }
+            written_warranty: { maskStrategy: none, options: {  } }
+            warranty_terms: { maskStrategy: none, options: {  } }
+            image_id: { maskStrategy: none, options: {  } }
+            added_by_company: { maskStrategy: none, options: {  } }
+            direct_contact: { maskStrategy: none, options: {  } }
+            direct_phone: { maskStrategy: none, options: {  } }
+            company_contact_name: { maskStrategy: none, options: {  } }
+            imported_company_id: { maskStrategy: none, options: {  } }
+            parent_company_id: { maskStrategy: none, options: {  } }
+            location_id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            total_number_of_reviews_cache: { maskStrategy: none, options: {  } }
+            total_number_of_approved_reviews_cache: { maskStrategy: none, options: {  } }
+            number_of_photos_cache: { maskStrategy: none, options: {  } }
+            avg_rating_cache: { maskStrategy: none, options: {  } }
+            categories_info_cache: { maskStrategy: none, options: {  } }
+            reviews_info_cache: { maskStrategy: none, options: {  } }
+            claimed_terms_of_use: { maskStrategy: none, options: {  } }
+            savings_count: { maskStrategy: none, options: {  } }
+            claimed_at: { maskStrategy: none, options: {  } }
+            subdomain: { maskStrategy: none, options: {  } }
+            redirect_to: { maskStrategy: none, options: {  } }
+            fraudulent: { maskStrategy: none, options: {  } }
+            fraudulent_date: { maskStrategy: none, options: {  } }
+            fraudulent_count: { maskStrategy: none, options: {  } }
+            shipping_location_id: { maskStrategy: none, options: {  } }
+            total_number_of_pending_reviews_cache: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+            former_names: { maskStrategy: none, options: {  } }
+            completion_percent_cache: { maskStrategy: none, options: {  } }
+            avg_initial_response_time_in_seconds: { maskStrategy: none, options: {  } }
+            avg_response_quality: { maskStrategy: none, options: {  } }
+            bully: { maskStrategy: none, options: {  } }
+            company_listing_id: { maskStrategy: none, options: {  } }
+            secret: { maskStrategy: none, options: {  } }
+            replied_to_at_least_one_review_cache: { maskStrategy: none, options: {  } }
+            latest_approved_review_created_at: { maskStrategy: none, options: {  } }
+            has_set_tasks: { maskStrategy: none, options: {  } }
+            lead_purchase_eligible: { maskStrategy: none, options: {  } }
+            product_type: { maskStrategy: none, options: {  } }
+        <<: *subset
+        subsetOptions:
+          column: id
+          values: *company_ids
+    company_categories:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            primary: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            version: { maskStrategy: none, options: {  } }
+        <<: *subset
+    company_claim_events:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            event: { maskStrategy: none, options: {  } }
+            ga_client_id: { maskStrategy: none, options: {  } }
+            ga_session_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    company_contacts:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            contact_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            invitation_id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            sms_sent_on: { maskStrategy: none, options: {  } }
+            reminder_sent_on: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+            quote_request_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    company_related_ids:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            salesforce_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            zuora_id: { maskStrategy: none, options: {  } }
+    company_role_permissions:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_role_id: { maskStrategy: none, options: {  } }
+            feature: { maskStrategy: none, options: {  } }
+            read: { maskStrategy: none, options: {  } }
+            write: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    company_roles:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    company_social_media_links:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            url: { maskStrategy: none, options: {  } }
+            social_media_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    company_user_roles:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            company_role_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    contacts:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            address: { maskStrategy: none, options: {  } }
+            city: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            to_email: { maskStrategy: none, options: {  } }
+            contact_pref: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            subject: { maskStrategy: none, options: {  } }
+            message: { maskStrategy: none, options: {  } }
+            business_contact: { maskStrategy: none, options: {  } }
+            validate_only_email: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            category: { maskStrategy: none, options: {  } }
+            visitor_information: { maskStrategy: none, options: {  } }
+        <<: *subset
+    countries:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            iso: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            iso3: { maskStrategy: none, options: {  } }
+            code: { maskStrategy: none, options: {  } }
+            priority: { maskStrategy: none, options: {  } }
+            hidden: { maskStrategy: none, options: {  } }
+        subsetStrategy: where_sql
+        subsetOptions:
+          sql: "`iso` = 'CA'"
+    customer_users:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            customer_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    customers:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            billing_user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            external_id: { maskStrategy: none, options: {  } }
+            billing_location_id: { maskStrategy: none, options: {  } }
+            external_commerce_vendor: { maskStrategy: none, options: {  } }
+            sales_rep_user_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    delayed_jobs:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            priority: { maskStrategy: none, options: {  } }
+            attempts: { maskStrategy: none, options: {  } }
+            handler: { maskStrategy: none, options: {  } }
+            last_error: { maskStrategy: none, options: {  } }
+            run_at: { maskStrategy: none, options: {  } }
+            locked_at: { maskStrategy: none, options: {  } }
+            failed_at: { maskStrategy: none, options: {  } }
+            locked_by: { maskStrategy: none, options: {  } }
+            queue: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    delayed_jobs_rails3:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            priority: { maskStrategy: none, options: {  } }
+            attempts: { maskStrategy: none, options: {  } }
+            handler: { maskStrategy: none, options: {  } }
+            last_error: { maskStrategy: none, options: {  } }
+            run_at: { maskStrategy: none, options: {  } }
+            locked_at: { maskStrategy: none, options: {  } }
+            failed_at: { maskStrategy: none, options: {  } }
+            locked_by: { maskStrategy: none, options: {  } }
+            queue: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    droplet_notifications:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            subject_owner_type: { maskStrategy: none, options: {  } }
+            subject_owner_id: { maskStrategy: none, options: {  } }
+            subject_type: { maskStrategy: none, options: {  } }
+            subject_id: { maskStrategy: none, options: {  } }
+            topic: { maskStrategy: none, options: {  } }
+            to_id: { maskStrategy: none, options: {  } }
+            to_type: { maskStrategy: none, options: {  } }
+            message_template_id: { maskStrategy: none, options: {  } }
+            once_every: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            secret: { maskStrategy: none, options: {  } }
+            publisher_type: { maskStrategy: none, options: {  } }
+            publisher_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    epn_category_sponsors:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            title: { maskStrategy: none, options: {  } }
+            intro_text: { maskStrategy: none, options: {  } }
+            landing_page_url: { maskStrategy: none, options: {  } }
+            logo: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    external_message_templates:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            external_service: { maskStrategy: none, options: {  } }
+            unique_id: { maskStrategy: none, options: {  } }
+            template_name: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    feature_flags:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    feature_pages:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            site_feature_id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            goal: { maskStrategy: none, options: {  } }
+            page_order: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    featured_service_areas:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+            last_displayed_on: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    features:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            featureable_id: { maskStrategy: none, options: {  } }
+            featureable_type: { maskStrategy: none, options: {  } }
+            good: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    footprints:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            footprintable_id: { maskStrategy: none, options: {  } }
+            footprintable_type: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            source: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    fraud_rules:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            end_at: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            notes: { maskStrategy: none, options: {  } }
+            penalty_percentage: { maskStrategy: none, options: {  } }
+        <<: *subset
+    giving_back_awards:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            year: { maskStrategy: none, options: {  } }
+            blog_post: { maskStrategy: none, options: {  } }
+            active: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    grand_fathered_company_scores:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            expiry: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    identities:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            uid: { maskStrategy: none, options: {  } }
+            provider: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            token: { maskStrategy: none, options: {  } }
+            expires_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    images:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            attacheable_id: { maskStrategy: none, options: {  } }
+            attacheable_type: { maskStrategy: none, options: {  } }
+            content_type: { maskStrategy: none, options: {  } }
+            filename: { maskStrategy: none, options: {  } }
+            size: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            caption: { maskStrategy: none, options: {  } }
+            display_order: { maskStrategy: none, options: {  } }
+            stored_on_rackspace: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    impression_summaries:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            impressionable_id: { maskStrategy: none, options: {  } }
+            impressionable_type: { maskStrategy: none, options: {  } }
+            topic: { maskStrategy: none, options: {  } }
+            year: { maskStrategy: none, options: {  } }
+            january: { maskStrategy: none, options: {  } }
+            february: { maskStrategy: none, options: {  } }
+            march: { maskStrategy: none, options: {  } }
+            april: { maskStrategy: none, options: {  } }
+            may: { maskStrategy: none, options: {  } }
+            june: { maskStrategy: none, options: {  } }
+            july: { maskStrategy: none, options: {  } }
+            august: { maskStrategy: none, options: {  } }
+            september: { maskStrategy: none, options: {  } }
+            october: { maskStrategy: none, options: {  } }
+            november: { maskStrategy: none, options: {  } }
+            december: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            locale_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    impression_summary_verticals:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            amount: { maskStrategy: none, options: {  } }
+            impressionable_id: { maskStrategy: none, options: {  } }
+            year: { maskStrategy: none, options: {  } }
+            impressionable_type: { maskStrategy: none, options: {  } }
+            topic: { maskStrategy: none, options: {  } }
+            month: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            locale_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    impressions:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            host: { maskStrategy: none, options: {  } }
+            url: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            created_by: { maskStrategy: none, options: {  } }
+            impressionable_id: { maskStrategy: none, options: {  } }
+            impressionable_type: { maskStrategy: none, options: {  } }
+            topic: { maskStrategy: none, options: {  } }
+            archived: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            application: { maskStrategy: none, options: {  } }
+            operating_system: { maskStrategy: none, options: {  } }
+            browser: { maskStrategy: none, options: {  } }
+            ip_address: { maskStrategy: none, options: {  } }
+            computer_id: { maskStrategy: none, options: {  } }
+            search_engine: { maskStrategy: none, options: {  } }
+            originating_impressionable_type: { maskStrategy: none, options: {  } }
+            originating_impressionable_id: { maskStrategy: none, options: {  } }
+            test: { maskStrategy: none, options: {  } }
+            utm: { maskStrategy: none, options: {  } }
+            locale_id: { maskStrategy: none, options: {  } }
+            summarized: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    info_droplets:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            subject_id: { maskStrategy: none, options: {  } }
+            subject_type: { maskStrategy: none, options: {  } }
+            topic: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            expire_on: { maskStrategy: none, options: {  } }
+            to_id: { maskStrategy: none, options: {  } }
+            to_type: { maskStrategy: none, options: {  } }
+            droplet_notification_id: { maskStrategy: none, options: {  } }
+            message_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            notification_state: { maskStrategy: none, options: {  } }
+            publisher_type: { maskStrategy: none, options: {  } }
+            publisher_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    instant_logins:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            token: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            expired_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    interviews:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            quote_request_id: { maskStrategy: none, options: {  } }
+            source: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            source_company_id: { maskStrategy: none, options: {  } }
+            source_service_area_id: { maskStrategy: none, options: {  } }
+            attachment_id: { maskStrategy: none, options: {  } }
+            routed: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            ga_client_id: { maskStrategy: none, options: {  } }
+            ga_session_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            bronze: { maskStrategy: none, options: {  } }
+        <<: *subset
+        subsetOptions:
+          column: source_company_id
+          values: *company_ids
+    investigations:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            body: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    job_request_v2_events:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            job_request_v2_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            reason: { maskStrategy: none, options: {  } }
+            message: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    job_requests:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            quote_request_id: { maskStrategy: none, options: {  } }
+            conversation_id: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+            direct: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            state_updated_at: { maskStrategy: none, options: {  } }
+            job_request_availability_id: { maskStrategy: none, options: {  } }
+            reminder_sent_at: { maskStrategy: none, options: {  } }
+            routing_cycle_id: { maskStrategy: none, options: {  } }
+            messages_count: { maskStrategy: none, options: {  } }
+            cached_last_activity: { maskStrategy: none, options: {  } }
+            preferred_contact_ack: { maskStrategy: none, options: {  } }
+            distribution_engine: { maskStrategy: none, options: {  } }
+            archive: { maskStrategy: none, options: {  } }
+            lead_id: { maskStrategy: none, options: {  } }
+            category_group_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    keywords:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            words: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    lead_answers:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            text: { maskStrategy: none, options: {  } }
+            display_text: { maskStrategy: none, options: {  } }
+            default: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            lead_question_id: { maskStrategy: none, options: {  } }
+            home_advisor_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    lead_interview_responses:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            quote_request_id: { maskStrategy: none, options: {  } }
+            lead_question_id: { maskStrategy: none, options: {  } }
+            lead_answer_id: { maskStrategy: none, options: {  } }
+            text: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            type: { maskStrategy: none, options: {  } }
+            interview_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    lead_questions:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            text: { maskStrategy: none, options: {  } }
+            placeholder: { maskStrategy: none, options: {  } }
+            short_text: { maskStrategy: none, options: {  } }
+            presentation_type: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            required: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            home_advisor_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+    links:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            url: { maskStrategy: none, options: {  } }
+            text: { maskStrategy: none, options: {  } }
+            linkable_type: { maskStrategy: none, options: {  } }
+            linkable_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    locations:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            locatable_id: { maskStrategy: none, options: {  } }
+            locatable_type: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            address_one: { maskStrategy: none, options: {  } }
+            address_two: { maskStrategy: none, options: {  } }
+            city: { maskStrategy: none, options: {  } }
+            province_id: { maskStrategy: none, options: {  } }
+            postal_code: { maskStrategy: none, options: {  } }
+            country_id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            extension: { maskStrategy: none, options: {  } }
+            fax: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            cell: { maskStrategy: none, options: {  } }
+            latitude: { maskStrategy: none, options: {  } }
+            longitude: { maskStrategy: none, options: {  } }
+            primary: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            radius: { maskStrategy: none, options: {  } }
+            geocode_status: { maskStrategy: none, options: {  } }
+            closest_city_id: { maskStrategy: none, options: {  } }
+            closest_launched_city_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: where_sql
+        subsetOptions:
+          sql: "country_id is null OR country_id IN (SELECT id FROM countries WHERE `iso` = 'CA')"
+    locations_for_sales_force_zuora:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            locatable_id: { maskStrategy: none, options: {  } }
+            locatable_type: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            address_one: { maskStrategy: none, options: {  } }
+            address_two: { maskStrategy: none, options: {  } }
+            city: { maskStrategy: none, options: {  } }
+            province_id: { maskStrategy: none, options: {  } }
+            postal_code: { maskStrategy: none, options: {  } }
+            country_id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            extension: { maskStrategy: none, options: {  } }
+            fax: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            cell: { maskStrategy: none, options: {  } }
+            latitude: { maskStrategy: none, options: {  } }
+            longitude: { maskStrategy: none, options: {  } }
+            primary: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            radius: { maskStrategy: none, options: {  } }
+            geocode_status: { maskStrategy: none, options: {  } }
+            closest_city_id: { maskStrategy: none, options: {  } }
+            closest_launched_city_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    locations_users_without_postal_code:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            locatable_id: { maskStrategy: none, options: {  } }
+            locatable_type: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            address_one: { maskStrategy: none, options: {  } }
+            address_two: { maskStrategy: none, options: {  } }
+            city: { maskStrategy: none, options: {  } }
+            province_id: { maskStrategy: none, options: {  } }
+            postal_code: { maskStrategy: none, options: {  } }
+            country_id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            extension: { maskStrategy: none, options: {  } }
+            fax: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            cell: { maskStrategy: none, options: {  } }
+            latitude: { maskStrategy: none, options: {  } }
+            longitude: { maskStrategy: none, options: {  } }
+            primary: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            radius: { maskStrategy: none, options: {  } }
+            geocode_status: { maskStrategy: none, options: {  } }
+            closest_city_id: { maskStrategy: none, options: {  } }
+            closest_launched_city_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mailboxer_conversation_opt_outs:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            conversation_id: { maskStrategy: none, options: {  } }
+            unsubscriber_id: { maskStrategy: none, options: {  } }
+            unsubscriber_type: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mailboxer_conversations:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            subject: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mailboxer_notifications:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            conversation_id: { maskStrategy: none, options: {  } }
+            type: { maskStrategy: none, options: {  } }
+            body: { maskStrategy: none, options: {  } }
+            subject: { maskStrategy: none, options: {  } }
+            sender_id: { maskStrategy: none, options: {  } }
+            sender_type: { maskStrategy: none, options: {  } }
+            draft: { maskStrategy: none, options: {  } }
+            notification_code: { maskStrategy: none, options: {  } }
+            notified_object_id: { maskStrategy: none, options: {  } }
+            notified_object_type: { maskStrategy: none, options: {  } }
+            attachment: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            global: { maskStrategy: none, options: {  } }
+            expires: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mailboxer_receipts:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            notification_id: { maskStrategy: none, options: {  } }
+            receiver_id: { maskStrategy: none, options: {  } }
+            receiver_type: { maskStrategy: none, options: {  } }
+            is_read: { maskStrategy: none, options: {  } }
+            trashed: { maskStrategy: none, options: {  } }
+            deleted: { maskStrategy: none, options: {  } }
+            mailbox_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    media:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            media_gallery_id: { maskStrategy: none, options: {  } }
+            actual_medium_id: { maskStrategy: none, options: {  } }
+            actual_medium_type: { maskStrategy: none, options: {  } }
+            display_order: { maskStrategy: none, options: {  } }
+            caption: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    media_galleries:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            owner_id: { maskStrategy: none, options: {  } }
+            owner_type: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            display_order: { maskStrategy: none, options: {  } }
+            kind: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+            media_count: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    medium_youtubes:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            identifier: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+            updated_on: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    message_job_attachments:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            message_job_id: { maskStrategy: none, options: {  } }
+            file_path: { maskStrategy: none, options: {  } }
+            created_on: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    message_jobs:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            message_template_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            from_id: { maskStrategy: none, options: {  } }
+            from_email: { maskStrategy: none, options: {  } }
+            send_on: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            publisher_type: { maskStrategy: none, options: {  } }
+            publisher_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    message_managers:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            type: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    message_templates:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            subject_template_id: { maskStrategy: none, options: {  } }
+            body_template_id: { maskStrategy: none, options: {  } }
+            html_body_template_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            messageable_type: { maskStrategy: none, options: {  } }
+            messageable_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    messages:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            message_job_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            unique_message_identifier: { maskStrategy: none, options: {  } }
+            to_id: { maskStrategy: none, options: {  } }
+            from_id: { maskStrategy: none, options: {  } }
+            to_email: { maskStrategy: none, options: {  } }
+            from_email: { maskStrategy: none, options: {  } }
+            subject: { maskStrategy: none, options: {  } }
+            body: { maskStrategy: none, options: {  } }
+            body_html: { maskStrategy: none, options: {  } }
+            sent_on: { maskStrategy: none, options: {  } }
+            send_on: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            replyto: { maskStrategy: none, options: {  } }
+            cc_id: { maskStrategy: none, options: {  } }
+            cc_email: { maskStrategy: none, options: {  } }
+            bcc_id: { maskStrategy: none, options: {  } }
+            bcc_email: { maskStrategy: none, options: {  } }
+            info_droplet_id: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+            reason_for_delivery_failure: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mobile_devices:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            mobile_user_id: { maskStrategy: none, options: {  } }
+            device_token: { maskStrategy: none, options: {  } }
+            device_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            environment: { maskStrategy: none, options: {  } }
+            type: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mobile_notifications:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            meta: { maskStrategy: none, options: {  } }
+            recipient_id: { maskStrategy: none, options: {  } }
+            sender_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    mobile_users:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            auth_token: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            last_seen_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    parent_companies:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            customer_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    phonecalls:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            job_request_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    phones:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    provinces:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            country_id: { maskStrategy: none, options: {  } }
+            name_short: { maskStrategy: none, options: {  } }
+            name_long: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+    quote_requests:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            source_company_id: { maskStrategy: none, options: {  } }
+            source_service_area_id: { maskStrategy: none, options: {  } }
+            attachment_id: { maskStrategy: none, options: {  } }
+            source: { maskStrategy: none, options: {  } }
+            city: { maskStrategy: none, options: {  } }
+            province: { maskStrategy: none, options: {  } }
+            postal_code: { maskStrategy: none, options: {  } }
+            country: { maskStrategy: none, options: {  } }
+            neighborhood: { maskStrategy: none, options: {  } }
+            latitude: { maskStrategy: none, options: {  } }
+            longitude: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+            message: { maskStrategy: none, options: {  } }
+            routed: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            inbound_id: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            street_address: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            reason_for_closing: { maskStrategy: none, options: {  } }
+            contact_method: { maskStrategy: none, options: {  } }
+            fulfilled: { maskStrategy: none, options: {  } }
+            cached_category_display_name: { maskStrategy: none, options: {  } }
+            distribution_engine: { maskStrategy: none, options: {  } }
+            review_request_sent_on: { maskStrategy: none, options: {  } }
+            ip_address_of_origin: { maskStrategy: none, options: {  } }
+        <<: *subset
+        subsetOptions:
+          column: source_company_id
+          values: *company_ids
+    rank_aggregates:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            number_of_approved_reviews: { maskStrategy: none, options: {  } }
+            average_rating: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            locale_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+    rank_aggregates_reviews:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            rank_aggregate_id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+    recommendation_meter_stat_v2s:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            cheat_adjustment: { maskStrategy: none, options: {  } }
+            bully_adjustment: { maskStrategy: none, options: {  } }
+            base_score: { maskStrategy: none, options: {  } }
+            inactivity_adjustment: { maskStrategy: none, options: {  } }
+            star_score: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            responsiveness_adjustment: { maskStrategy: none, options: {  } }
+            fraud_adjustment: { maskStrategy: none, options: {  } }
+            average_rating: { maskStrategy: none, options: {  } }
+            no_reviews_adjustment: { maskStrategy: none, options: {  } }
+            boosted: { maskStrategy: none, options: {  } }
+            score_without_boost: { maskStrategy: none, options: {  } }
+            boosted_at: { maskStrategy: none, options: {  } }
+            boost_expected_removed_at: { maskStrategy: none, options: {  } }
+            boost_removed_at: { maskStrategy: none, options: {  } }
+            boost_removed_reason: { maskStrategy: none, options: {  } }
+            report: { maskStrategy: none, options: {  } }
+        <<: *subset
+    reply_templates:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            title: { maskStrategy: none, options: {  } }
+            message: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    review_drafts:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            review_attributes: { maskStrategy: none, options: {  } }
+            last_notified_at: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            deleted_at: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+        <<: *subset
+    review_engine_homeowner_review_attributes:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            homeowner_review_id: { maskStrategy: none, options: {  } }
+            homeowner_review_sentiment_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    review_engine_homeowner_review_sentiments:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            tag: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    review_engine_homeowner_reviews:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            homeowner_id: { maskStrategy: none, options: {  } }
+            rating: { maskStrategy: none, options: {  } }
+            company_user_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        <<: *subset
+    review_metadata:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            impressions: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            found_on_hs: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    review_moderation_predictions:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            predicted_score: { maskStrategy: none, options: {  } }
+            predicted_label: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    review_requests:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_contact_id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    review_responses:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            ca_company_review_response_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            text: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            last_notification: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    reviews:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            quote_request_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            cost: { maskStrategy: none, options: {  } }
+            title: { maskStrategy: none, options: {  } }
+            story: { maskStrategy: none, options: {  } }
+            improveable: { maskStrategy: none, options: {  } }
+            advice: { maskStrategy: none, options: {  } }
+            satisfaction: { maskStrategy: none, options: {  } }
+            recommendation: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            helpful_count: { maskStrategy: none, options: {  } }
+            not_helpful_count: { maskStrategy: none, options: {  } }
+            admin_note: { maskStrategy: none, options: {  } }
+            ip_address: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            investigation_reason: { maskStrategy: none, options: {  } }
+            secret: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+            version: { maskStrategy: none, options: {  } }
+            publish_to_facebook: { maskStrategy: none, options: {  } }
+            reasons_for_suspicion_cache: { maskStrategy: none, options: {  } }
+            fraudulent: { maskStrategy: none, options: {  } }
+            member_promotion_id: { maskStrategy: none, options: {  } }
+            member_qualification_id: { maskStrategy: none, options: {  } }
+            money_changed: { maskStrategy: none, options: {  } }
+            company_found_where: { maskStrategy: none, options: {  } }
+            image_count_cache: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+            cil_reason_id: { maskStrategy: none, options: {  } }
+            zendesk_ticket_identifier: { maskStrategy: none, options: {  } }
+            zendesk_ticket_url: { maskStrategy: none, options: {  } }
+            project_id: { maskStrategy: none, options: {  } }
+            was_previously_approved: { maskStrategy: none, options: {  } }
+            anonymous: { maskStrategy: none, options: {  } }
+            review_request_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    roles:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            secret: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    schema_migrations:
+        columns:
+            version: { maskStrategy: none, options: {  } }
+    scoring_variables:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            gold_badge_weight: { maskStrategy: none, options: {  } }
+            silver_badge_weight: { maskStrategy: none, options: {  } }
+            bronze_badge_weight: { maskStrategy: none, options: {  } }
+            no_badge_weight: { maskStrategy: none, options: {  } }
+            low_no_reviews_lower_bound: { maskStrategy: none, options: {  } }
+            low_no_reviews_upper_bound: { maskStrategy: none, options: {  } }
+            medium_no_reviews_lower_bound: { maskStrategy: none, options: {  } }
+            medium_no_reviews_upper_bound: { maskStrategy: none, options: {  } }
+            high_no_reviews_lower_bound: { maskStrategy: none, options: {  } }
+            high_no_reviews_upper_bound: { maskStrategy: none, options: {  } }
+            low_no_reviews_reviews_weight: { maskStrategy: none, options: {  } }
+            medium_no_reviews_weight: { maskStrategy: none, options: {  } }
+            high_no_reviews_weight: { maskStrategy: none, options: {  } }
+            max_points_per_decay: { maskStrategy: none, options: {  } }
+            age_weight: { maskStrategy: none, options: {  } }
+            default_inactivity_rate: { maskStrategy: none, options: {  } }
+            default_max_no_companies: { maskStrategy: none, options: {  } }
+            max_cheat_point: { maskStrategy: none, options: {  } }
+            base_score_adjustment: { maskStrategy: none, options: {  } }
+            max_responsiveness_adjustment: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    service_area_tasks:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            commercial: { maskStrategy: none, options: {  } }
+            emergency: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+        <<: *subset
+    service_areas:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            contact_user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            publish_address: { maskStrategy: none, options: {  } }
+            location_id: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            closest_city_cache: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            custom_name: { maskStrategy: none, options: {  } }
+            receive_project_messages: { maskStrategy: none, options: {  } }
+            created_by: { maskStrategy: none, options: {  } }
+            updated_by: { maskStrategy: none, options: {  } }
+            version: { maskStrategy: none, options: {  } }
+        <<: *subset
+    site_feature_reasons:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            site_feature_id: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            page_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    site_features:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    sort_order_specification_provinces:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            sort_order_specification_id: { maskStrategy: none, options: {  } }
+            province_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    sort_order_specification_results:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            sort_order_specification_id: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            position: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+    sort_order_specifications:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            b1: { maskStrategy: none, options: {  } }
+            n1_lower: { maskStrategy: none, options: {  } }
+            n1_upper: { maskStrategy: none, options: {  } }
+            b2: { maskStrategy: none, options: {  } }
+            n2_lower: { maskStrategy: none, options: {  } }
+            n2_upper: { maskStrategy: none, options: {  } }
+            alp1: { maskStrategy: none, options: {  } }
+            alp2: { maskStrategy: none, options: {  } }
+            alp3: { maskStrategy: none, options: {  } }
+            alp4: { maskStrategy: none, options: {  } }
+            beta: { maskStrategy: none, options: {  } }
+            lamb1: { maskStrategy: none, options: {  } }
+            lamb2: { maskStrategy: none, options: {  } }
+            p: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            maximum_review_quality: { maskStrategy: none, options: {  } }
+            rg_review_quality: { maskStrategy: none, options: {  } }
+            aar_review_quality: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    source_tags:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            sourceable_id: { maskStrategy: none, options: {  } }
+            sourceable_type: { maskStrategy: none, options: {  } }
+            source_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    sources:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    special_offer_types:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    special_offers:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            tier: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            special_offer_type_id: { maskStrategy: none, options: {  } }
+            amount: { maskStrategy: none, options: {  } }
+            task_id: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            details: { maskStrategy: none, options: {  } }
+            start_date: { maskStrategy: none, options: {  } }
+            end_date: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    subscription_products:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            subscription_id: { maskStrategy: none, options: {  } }
+            product_id: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            begin_at: { maskStrategy: none, options: {  } }
+            city_id: { maskStrategy: none, options: {  } }
+            category_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    subscriptions:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            type: { maskStrategy: none, options: {  } }
+            product_id: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            promotion_id: { maskStrategy: none, options: {  } }
+            auto_renew: { maskStrategy: none, options: {  } }
+            number_free_months: { maskStrategy: none, options: {  } }
+            begin_at: { maskStrategy: none, options: {  } }
+            end_at: { maskStrategy: none, options: {  } }
+            billing_period_in_months: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            instructions_from_company: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            created_by: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            admin_notes: { maskStrategy: none, options: {  } }
+            current_subscription_id: { maskStrategy: none, options: {  } }
+            no_of_categories: { maskStrategy: none, options: {  } }
+            no_of_service_areas: { maskStrategy: none, options: {  } }
+            trial: { maskStrategy: none, options: {  } }
+            premium_gallery: { maskStrategy: none, options: {  } }
+            widget: { maskStrategy: none, options: {  } }
+            version: { maskStrategy: none, options: {  } }
+            trial_reminders_sent: { maskStrategy: none, options: {  } }
+            bail: { maskStrategy: none, options: {  } }
+            no_of_featured_ads: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            subscription_uuid: { maskStrategy: none, options: {  } }
+        <<: *subset
+    taggings:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            tag_id: { maskStrategy: none, options: {  } }
+            taggable_id: { maskStrategy: none, options: {  } }
+            taggable_type: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    tags:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            tag_owner_id: { maskStrategy: none, options: {  } }
+            tag_owner_type: { maskStrategy: none, options: {  } }
+            read_only: { maskStrategy: none, options: {  } }
+            synch_externally: { maskStrategy: none, options: {  } }
+            system_wide: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    tasks:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            slug: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            display_name: { maskStrategy: none, options: {  } }
+            description: { maskStrategy: none, options: {  } }
+            home_advisor_id: { maskStrategy: none, options: {  } }
+    templates:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+            script: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            messageable_id: { maskStrategy: none, options: {  } }
+            messageable_type: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    top_cities_service_areas:
+        columns:
+            city: { maskStrategy: none, options: {  } }
+            company_id: { maskStrategy: none, options: {  } }
+            service_area_id: { maskStrategy: none, options: {  } }
+        <<: *subset
+    user_badges:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    user_preferences:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            receive_company_news: { maskStrategy: none, options: {  } }
+            receive_notifications: { maskStrategy: none, options: {  } }
+            unique_id: { maskStrategy: none, options: {  } }
+            version: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            ip_address: { maskStrategy: none, options: {  } }
+            opted_in_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    user_roles:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            role_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    user_stats:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            user_badge_id: { maskStrategy: none, options: {  } }
+            last_logged_in: { maskStrategy: none, options: {  } }
+            cil_to_approved_review_count: { maskStrategy: none, options: {  } }
+            approved_review_count: { maskStrategy: none, options: {  } }
+            rejected_review_count: { maskStrategy: none, options: {  } }
+            low_scored_review_count: { maskStrategy: none, options: {  } }
+            review_impressions_count: { maskStrategy: none, options: {  } }
+            has_written_review: { maskStrategy: none, options: {  } }
+            first_to_review_a_company: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    users:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            login: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            crypted_password: { maskStrategy: none, options: {  } }
+            salt: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            last_login_at: { maskStrategy: none, options: {  } }
+            remember_token: { maskStrategy: none, options: {  } }
+            remember_token_expires_at: { maskStrategy: none, options: {  } }
+            visits_count: { maskStrategy: none, options: {  } }
+            permalink: { maskStrategy: none, options: {  } }
+            activation_code: { maskStrategy: none, options: {  } }
+            activated_at: { maskStrategy: none, options: {  } }
+            house_age: { maskStrategy: none, options: {  } }
+            role: { maskStrategy: none, options: {  } }
+            moderator: { maskStrategy: none, options: {  } }
+            ca_consumer_id: { maskStrategy: none, options: {  } }
+            ca_company_review_id: { maskStrategy: none, options: {  } }
+            first_name: { maskStrategy: none, options: {  } }
+            last_name: { maskStrategy: none, options: {  } }
+            ca_company_review_response_id: { maskStrategy: none, options: {  } }
+            ca_company_id: { maskStrategy: none, options: {  } }
+            password_reset_code: { maskStrategy: none, options: {  } }
+            favorite_room: { maskStrategy: none, options: {  } }
+            favorite_neighborhood: { maskStrategy: none, options: {  } }
+            next_project: { maskStrategy: none, options: {  } }
+            year_house_built: { maskStrategy: none, options: {  } }
+            website: { maskStrategy: none, options: {  } }
+            favorite_home_site: { maskStrategy: none, options: {  } }
+            profile_image_id: { maskStrategy: none, options: {  } }
+            profile_image_caption: { maskStrategy: none, options: {  } }
+            posts_count: { maskStrategy: none, options: {  } }
+            last_seen_at: { maskStrategy: none, options: {  } }
+            charter_member: { maskStrategy: none, options: {  } }
+            will_be_company_owner: { maskStrategy: none, options: {  } }
+            state: { maskStrategy: none, options: {  } }
+            facebook_id: { maskStrategy: none, options: {  } }
+            facebook_session_key: { maskStrategy: none, options: {  } }
+            sales_person_invoice_comments: { maskStrategy: none, options: {  } }
+            current_project_id: { maskStrategy: none, options: {  } }
+            current_company_id: { maskStrategy: none, options: {  } }
+            images_count: { maskStrategy: none, options: {  } }
+            registration_source: { maskStrategy: none, options: {  } }
+            use_beta_features: { maskStrategy: none, options: {  } }
+            synched_to_mixpanel: { maskStrategy: none, options: {  } }
+            valid_email: { maskStrategy: none, options: {  } }
+            unsubscribe_hash: { maskStrategy: none, options: {  } }
+            approved_reviews_count: { maskStrategy: none, options: {  } }
+            force_password_reset_status: { maskStrategy: none, options: {  } }
+            fraud: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    verification_requests:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            business_profile_id: { maskStrategy: none, options: {  } }
+            enabled: { maskStrategy: none, options: {  } }
+            expires_at: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+            approved_by: { maskStrategy: none, options: {  } }
+            grace_period_ends_at: { maskStrategy: none, options: {  } }
+            source: { maskStrategy: none, options: {  } }
+            sfdc_verification_id: { maskStrategy: none, options: {  } }
+            reminder_sent: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    votes:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            review_id: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            helpful: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: foreign_key_lookup
+        subsetOptions:
+          parent_table_name: reviews
+          child_table_column_name: review_id
+    whitelist_email_addresses:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            email: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    whitelist_phones:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            phone: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    widget_sites:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            widget_id: { maskStrategy: none, options: {  } }
+            unique_id: { maskStrategy: none, options: {  } }
+            subject_type: { maskStrategy: none, options: {  } }
+            subject_id: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    widgets:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            name: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+    worlds:
+        columns:
+            id: { maskStrategy: none, options: {  } }
+            created_at: { maskStrategy: none, options: {  } }
+            updated_at: { maskStrategy: none, options: {  } }
+        subsetStrategy: tail
+        subsetOptions:  { length: 100 }
+excludes:
+  - absence_versions
+  - company_category_versions
+  - company_listing_versions
+  - project_versions
+  - recommendation_meter_stats_v2_versions
+  - review_versions
+  - sales_opportunity_versions
+  - service_area_versions
+  - subscription_versions
+  - user_preference_versions
+  - version_associations
+  - versions
+  - transactions
+  - wallets
+  - jr_boosters
+  - zuora_lead_subscriptions
+  - company_opportunity_acceptance
+  - pricing_engine_price_ranges
+  - pricing_engine_proposed_prices
+  - pricing_engine_purchase_tiers
+  - routing_cycles
+  - subscriber_virtual_budgets
+  - sales_contacts
+  - sales_events
+  - sales_funnel_criteria
+  - sales_funnels
+  - sales_opportunities &<br />sales_opportunity_versions
+  - sales_opportunities_import
+  - savings
+  - surveys
+  - temp_brand_builder_to_hs_pro_product_migration
+  - TMP
+  - tmp_analytics_a
+  - tmp_analytics_bf
+  - tmp_analytics_c
+  - tmp_analytics_d
+  - tmp_analytics_e
+  - tmp_analytics_g
+  - tmp_analytics_h
+  - tmp_analytics_i
+  - tmp_analytics_j
+  - tmp_analytics_k
+  - tmp_analytics_l
+  - tmp_analytics_m
+  - tmp_analytics_n
+  - tmp_analytics_o
+  - tmp_analytics_p
+  - tmp_analytics_q
+  - tmp_analytics_r
+  - tmp_analytics_s
+  - tmp_analytics_t
+  - tmp_analytics_u
+  - tmp_analytics_v
+  - tmp_analytics_w
+  - tmp_analytics_x
+  - tmp_analytics_y
+  - tmp_analytics_z
+  - tmp_city_districts
+  - topics
+  - processor_responses
+  - product_options
+  - promotions
+  - qualifications
+  - quote_line_items
+  - quote_requests_imports
+  - quote_requests_import_delta
+  - quote_requests_import_delta3
+  - quotes
+  - recommendation_meter_stats
+  - recommendation_meter_stats_20151109
+  - redemptions
+  - regions
+  - greater_areas
+  - greater_area_cities
+  - risk_and_bail_codes
+  - rollouts
+  - sample_jsons
+  - shares
+  - sitealizer
+  - snippets
+  - company_tasks
+  - crm_companies
+  - crm_contacts
+  - crm_salestracking
+  - customer_credit_cards
+  - dot_com_companies
+  - dot_com_users
+  - mailboxes
+  - mailbox_messages
+  - mailbox_folders
+  - email_flags
+  - email_signatures
+  - errors
+  - error_details
+  - events
+  - sales_events
+  - forums
+  - forum_votes
+  - forum_reportings
+  - friendships
+  - friend_invitations
+  - geocoding_transactions
+  - groups
+  - user_groups
+  - home_advisor_lead_interview_import
+  - homeadvisor_companies
+  - homeadvisor_task_prices
+  - homestars_task_prices
+  - homestars_tax_rates
+  - homestars
+  - imported_companies
+  - invoice_line_items
+  - invoice_payments
+  - invoices
+  - job_request_kpis
+  - job_request_v2_events_import
+  - job_request_v2_events_import_delta
+  - job_requests_service_areas_import
+  - layouts
+  - pages
+  - lead_discount_campaigns
+  - lead_interview_responses_2018_11_28
+  - member_promotions
+  - member_promotion_prizes
+  - member_qualifications
+  - moderatorships
+  - monitorships
+  - neighbourhoods
+  - locales
+  - areas
+  - new_subscriptions_lists
+  - order_line_items
+  - Orders
+  - parent_categories
+  - payment_types
+  - performance_details
+  - performance_summaries
+  - plugin_schema_info
+  - points
+  - points_histories
+  - posts
+  - press_mentions
+  - previous_company_listing_state_transitions
+  - project
+  - project_quotes
+  - project_notes
+  - project_companies
+  - project_categories
+  - sales_opportunities
+  - sterling_profiles
+  - card_orders
+  - company_listings
+  - contracts
+  - contract_signings
+  - sfdc_all_accounts
+  - ar_internal_metadata
+  - campaigns
+  - blog_entries
+  - contact_impressions
+  - ga_contact_impressions
+  - ga_impressions
+  - adwords_campaign_performance
+  - fact_leads
+  - city_search_summaries
+  - city_searches
+  - city_search
+  - city_search_summary_verticals
+  - marketing_sources
+  - banned_ips
+  - bots
+  - computers
+  - computers_used_by_users
+  - contests
+  - contest_entries
+  - delayed_jobs_rails3
+  - event_attendees
+  - event_days
+  - event_promotion_coupons
+  - event_promotions
+  - event_venues
+  - geocoding_results
+  - mail_tester
+  - shortened_urls
+  - social_media_redirects
+  - solr_sync_records
+  - account_deletion_requests
+  - company_related_ids
+  - sort_order_specification_results
+  - review_drafts
+  - rank_aggregates
+  - rank_aggregates_reviews
+  - possible_fraud_checkers
+  - review_engine_homeowner_review_attributes
+  - previous_state_transitions
+  - locations_users_without_postal_code
+  - locations_for_sales_force_zuora
