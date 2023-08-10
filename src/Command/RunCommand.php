@@ -100,6 +100,12 @@ class RunCommand extends FinishCommand
             return -1;
         }
 
+        if (!$this->schemaManipulator->isTargetSchemaEmpty()) {
+            $io->text('Dropping database schema...');
+            $this->schemaManipulator->dropTargetSchema();
+            $io->success('Target database schema dropped successfully!');
+        }
+
         try {
             $this->schemaManipulator->copySchemaDroppingIndexesAndForeignKeys();
             $this->recipe = $this->recipeFactory
@@ -116,8 +122,8 @@ class RunCommand extends FinishCommand
             $output->writeln('');
             $output->writeln(
                 <<<EOT
-<comment>With dont-wait option the command will only queue data chunks to be processed by the rabbit 
-worker command. Worker runs in background unless you started docker-composer with --scale=worker=0. 
+<comment>With dont-wait option the command will only queue data chunks to be processed by the rabbit
+worker command. Worker runs in background unless you started docker-composer with --scale=worker=0.
 In order to recreate indexes and foreign keys you will need to manually execute the fogger:finish
 command after the workers</comment>
 EOT
