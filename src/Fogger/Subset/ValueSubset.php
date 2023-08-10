@@ -5,17 +5,20 @@ namespace App\Fogger\Subset;
 use App\Fogger\Recipe\Table;
 use Doctrine\DBAL\Query\QueryBuilder;
 
-class RangeSubset extends AbstractSubset
+class ValueSubset extends AbstractSubset
 {
+    const SUBSET_STRATEGY_NAME = 'value';
+    const CONFIGURED_VALUES = 'values';
+    const CONFIGURED_COLUMN_NAME = 'column';
+
     /**
      * @param array $options
      * @throws Exception\RequiredOptionMissingException
      */
     private function ensureValidOptions(array $options)
     {
-        $this->ensureOptionIsSet($options, 'column');
-        $this->ensureOptionIsSet($options, 'from');
-        $this->ensureOptionIsSet($options, 'to');
+        $this->ensureOptionIsSet($options, self::CONFIGURED_COLUMN_NAME);
+        $this->ensureOptionIsSet($options, self::CONFIGURED_VALUES);
     }
 
     /**
@@ -29,14 +32,12 @@ class RangeSubset extends AbstractSubset
         $this->ensureValidOptions($options = $table->getSubset()->getOptions());
 
         return $queryBuilder
-            ->where(sprintf('%s >= ?', $options['column']))
-            ->andWhere(sprintf('%s <= ?', $options['column']))
-            ->setParameter(0, $options['from'])
-            ->setParameter(1, $options['to']);
+            ->where(sprintf('`%s` in (:values)', $options['column']))
+            ->setParameter('values', $options['values'], \Doctrine\DBAL\Connection::PARAM_INT_ARRAY);
     }
 
     public function getSubsetStrategyName(): string
     {
-        return 'range';
+        return self::SUBSET_STRATEGY_NAME;
     }
 }

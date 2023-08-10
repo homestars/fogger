@@ -16,6 +16,8 @@ class RecipeFactory
 
     private $maskReplicator;
 
+    private static $recipe = null;
+
     public function __construct(
         ConfigLoader $configLoader,
         Connection $connection,
@@ -36,8 +38,13 @@ class RecipeFactory
      */
     public function createRecipe(string $configFilename, int $chunkSize = ChunkMessage::DEFAULT_CHUNK_SIZE)
     {
+        if (self::$recipe != null) {
+            return self::$recipe;
+        }
+
         $config = $this->configLoader->load($configFilename);
         $recipe = new Recipe($config->getExcludes());
+        self::$recipe = $recipe;
 
         foreach ($this->sourceSchema->listTables() as $dbalTable) {
             $tableName = $dbalTable->getName();
@@ -51,5 +58,10 @@ class RecipeFactory
         $this->maskReplicator->replicateMasksToRelatedColumns($recipe);
 
         return $recipe;
+    }
+
+    public static function getRecipe(): Recipe
+    {
+        return self::$recipe;
     }
 }

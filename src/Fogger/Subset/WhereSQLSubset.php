@@ -5,17 +5,18 @@ namespace App\Fogger\Subset;
 use App\Fogger\Recipe\Table;
 use Doctrine\DBAL\Query\QueryBuilder;
 
-class RangeSubset extends AbstractSubset
+class WhereSQLSubset extends AbstractSubset
 {
+    const SUBSET_STRATEGY_NAME = 'where_sql';
+    const CONFIGURED_SQL = 'sql';
+
     /**
      * @param array $options
      * @throws Exception\RequiredOptionMissingException
      */
     private function ensureValidOptions(array $options)
     {
-        $this->ensureOptionIsSet($options, 'column');
-        $this->ensureOptionIsSet($options, 'from');
-        $this->ensureOptionIsSet($options, 'to');
+        $this->ensureOptionIsSet($options, self::CONFIGURED_SQL);
     }
 
     /**
@@ -28,15 +29,11 @@ class RangeSubset extends AbstractSubset
     {
         $this->ensureValidOptions($options = $table->getSubset()->getOptions());
 
-        return $queryBuilder
-            ->where(sprintf('%s >= ?', $options['column']))
-            ->andWhere(sprintf('%s <= ?', $options['column']))
-            ->setParameter(0, $options['from'])
-            ->setParameter(1, $options['to']);
+        return $queryBuilder->where(sprintf('(%s)', $options['sql']));
     }
 
     public function getSubsetStrategyName(): string
     {
-        return 'range';
+        return self::SUBSET_STRATEGY_NAME;
     }
 }
