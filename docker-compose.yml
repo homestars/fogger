@@ -3,27 +3,23 @@ services:
   app:
     depends_on:
     - redis
+    - target
+    - source
     build: .
     volumes:
     - .:/app
     - ./var/:/fogger
-    environment:
-      SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
-      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
-      RABBITMQ_URL: amqp://user:pass@rabbit:5672
-      REDIS_URL: redis://redis
+
   worker:
     depends_on:
     - redis
+    - target
+    - source
     build: .
     volumes:
     - .:/app
     - ./var/:/fogger
-    environment:
-      SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
-      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
-      RABBITMQ_URL: amqp://user:pass@rabbit:5672
-      REDIS_URL: redis://redis
+
     restart: always
     command: fogger:consumer
   redis:
@@ -35,6 +31,8 @@ services:
       MYSQL_ROOT_PASSWORD: pass
       MYSQL_USER: user
     image: mysql:5.7
+    volumes:
+    - ./var/:/fogger
   target:
     environment:
       MYSQL_DATABASE: target
