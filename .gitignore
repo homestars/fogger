@@ -6,9 +6,7 @@ Brewfile.lock.json
 snippets.*
 log
 mkmf.log
-
-# Keep .env.development local
-.env.development
+.env
 
 
 ### macOS ###
